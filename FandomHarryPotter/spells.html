@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Untree.co">
+	<link rel="shortcut icon" href="hallowsIcon.png">
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap4" />
+
+	<!-- Bootstrap CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+	<link href="css/tiny-slider.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<title>Hechizos</title>
+</head>
+
+<body>
+	<!-- Barra de navegacion -->
+	<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">HogwartsHearts<span>.</span></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
+				aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarsFurni">
+				<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+					<li><a class="nav-link" href="index.html">Inicio</a></li>
+					<li><a class="nav-link" href="books.html">Libros</a></li>
+					<li><a class="nav-link" href="personajes.html">Personajes</a></li>
+					<li class="nav-item active"><a class="nav-link" href="spells.html">Hechizos</a></li>
+					<li><a class="nav-link" href="news.html">Noticias</a></li>
+					<li><a class="nav-link" href="foro.html">Foro</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Barra de titulo -->
+	<div class="hero2">
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-lg-5">
+					<div class="intro-excerpt">
+						<h1>Hechizos</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- Sección de Hechizos -->
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-12 col-md-4 mb-4">
+				<div class="hechizo-card" onmouseover="showDescription(this)" onmouseout="hideDescription(this)">
+					<span class="hechizo-icon-nombre">
+						<img src="images/utilidad.svg" alt="Lock Icon" class="icon-hechizo">
+						<h4 class="hechizo-text">Accio</h4>
+					</span>
+					<p class="hechizo-description">Conocido como el Hechizo Convocador, permite al mago llamar objetos a
+						su mano desde la distancia. Es extremadamente útil para recuperar objetos rápidamente.</p>
+				</div>
+			</div>
+			<div class="col-12 col-md-4 mb-4">
+				<div class="hechizo-card" onmouseover="showDescription(this)" onmouseout="hideDescription(this)">
+					<span class="hechizo-icon-nombre">
+						<img src="images/utilidad.svg" alt="Lock Icon" class="icon-hechizo">
+						<h4 class="hechizo-text">Alohomora</h4>
+					</span>
+					<p class="hechizo-description">Un hechizo básico que desbloquea puertas y ventanas que no están
+						protegidas por magia. Es una herramienta común entre los magos para entrar en lugares cerrados.
+					</p>
+				</div>
+			</div>
+			<div class="col-12 col-md-4 mb-4">
+				<div class="hechizo-card" onmouseover="showDescription(this)" onmouseout="hideDescription(this)">
+					<span class="hechizo-icon-nombre">
+						<img src="images/transformacion.svg" alt="Lock Icon" class="icon-hechizo">
+						<h4 class="hechizo-text">Animagus</h4>
+					</span>
+					<p class="hechizo-description"> Una habilidad compleja y avanzada que solo unos pocos magos y brujas
+						pueden dominar, que les permite transformarse a voluntad en un animal específico, manteniendo su
+						conciencia humana.</p>
+				</div>
+			</div>
+			<div class="col-12 col-md-4 mb-4">
+				<div class="hechizo-card imperdonable" onmouseover="showDescription(this)"
+					onmouseout="hideDescription(this)">
+					<span class="hechizo-icon-nombre">
+						<img src="images/imperdonable.svg" alt="Lock Icon" class="icon-hechizo">
+						<h4 class="hechizo-text">Avada Kedavra</h4>
+					</span>
+					<p class="hechizo-description">Una de las más oscuras y peligrosas Maldiciones Imperdonables,
+						resultando en una muerte instantánea para la víctima. No hay conocimiento de un contrahechizo o
+						forma de bloquearlo, excepto en circunstancias muy raras.</p>
+				</div>
+			</div>
+			<div class="col-12 col-md-4 mb-4">
+				<div class="hechizo-card imperdonable" onmouseover="showDescription(this)"
+					onmouseout="hideDescription(this)">
+					<span class="hechizo-icon-nombre">
+						<img src="images/imperdonable.svg" alt="Lock Icon" class="icon-hechizo">
+						<h4 class="hechizo-text">Crucio</h4>
+					</span>
+					<p class="hechizo-description">También conocida como la Maldición Cruciatus, causa un dolor intenso
+						e insoportable. Su uso prolongado puede resultar en daño mental y físico permanente.</p>
+				</div>
+			</div>
+			<div class="col-12 col-md-4 mb-4">
+				<div class="hechizo-card" onmouseover="showDescription(this)" onmouseout="hideDescription(this)">
+					<span class="hechizo-icon-nombre">
+						<img src="images/oculto.svg" alt="Lock Icon" class="icon-hechizo">
+						<h4 class="hechizo-text">Desilusion</h4>
+					</span>
+					<p class="hechizo-description">Un hechizo que altera la apariencia del lanzador o un objeto para que
+						se mezcle con su entorno, actuando casi como un camuflaje.</p>
+				</div>
+			</div>
+			<div class="col-12 col-md-4 mb-4">
+				<div class="hechizo-card" onmouseover="showDescription(this)" onmouseout="hideDescription(this)">
+					<span class="hechizo-icon-nombre">
+						<img src="images/transformacion.svg" alt="Lock Icon" class="icon-hechizo">
+						<h4 class="hechizo-text">Engorgio</h4>
+					</span>
+					<p class="hechizo-description">Este hechizo de aumento hace que los objetos crezcan en tamaño. Debe
+						ser usado con precaución para evitar resultados inesperados o peligrosos.</p>
+				</div>
+			</div>
+			<div class="col-12 col-md-4 mb-4">
+				<div class="hechizo-card" onmouseover="showDescription(this)" onmouseout="hideDescription(this)">
+					<span class="hechizo-icon-nombre">
+						<img src="images/defensa.svg" alt="Lock Icon" class="icon-hechizo">
+						<h4 class="hechizo-text">Expelliarmus</h4>
+					</span>
+					<p class="hechizo-description">Popularmente utilizado en duelos, este hechizo desarma a un
+						adversario, a menudo enviando la varita del oponente volando fuera de su alcance.</p>
+				</div>
+			</div>
+			<div class="col-12 col-md-4 mb-4">
+				<div class="hechizo-card" onmouseover="showDescription(this)" onmouseout="hideDescription(this)">
+					<span class="hechizo-icon-nombre">
+						<img src="images/curacion.svg" alt="Lock Icon" class="icon-hechizo">
+						<h4 class="hechizo-text">Episkey</h4>
+					</span>
+					<p class="hechizo-description">Utilizado para curar lesiones menores y es especialmente útil en
+						situaciones de primeros auxilios. Este hechizo puede reparar cartílagos y pequeñas fracturas.
+					</p>
+				</div>
+			</div>
+			<div class="col-12 col-md-4 mb-4">
+				<div class="hechizo-card" onmouseover="showDescription(this)" onmouseout="hideDescription(this)">
+					<span class="hechizo-icon-nombre">
+						<img src="images/transformacion.svg" alt="Lock Icon" class="icon-hechizo">
+						<h4 class="hechizo-text">Ferula</h4>
+					</span>
+					<p class="hechizo-description">Genera vendajes de gasa y una férula rígida alrededor de un área
+						lesionada, inmovilizándola para su curación.</p>
+				</div>
+			</div>
+			<div class="col-12 col-md-4 mb-4">
+				<div class="hechizo-card imperdonable" onmouseover="showDescription(this)"
+					onmouseout="hideDescription(this)">
+					<span class="hechizo-icon-nombre">
+						<img src="images/imperdonable.svg" alt="Lock Icon" class="icon-hechizo">
+						<h4 class="hechizo-text">Imperio</h4>
+					</span>
+					<p class="hechizo-description"> Otro hechizo oscuro de las Maldiciones Imperdonables, permite al
+						lanzador tomar control total sobre otra persona, lo que lleva a la víctima a realizar acciones
+						contra su voluntad.</p>
+				</div>
+			</div>
+			<div class="col-12 col-md-4 mb-4">
+				<div class="hechizo-card" onmouseover="showDescription(this)" onmouseout="hideDescription(this)">
+					<span class="hechizo-icon-nombre">
+						<img src="images/encantamiento.svg" alt="Lock Icon" class="icon-hechizo">
+						<h4 class="hechizo-text">Levicorpus</h4>
+					</span>
+					<p class="hechizo-description"> Un hechizo que levanta a la víctima por los tobillos, suspendiéndola
+						en el aire. Originalmente era un hechizo no verbal, pero se ha conocido a través de los escritos
+						de los magos.</p>
+				</div>
+			</div>
+			<div class="col-12 col-md-4 mb-4">
+				<div class="hechizo-card" onmouseover="showDescription(this)" onmouseout="hideDescription(this)">
+					<span class="hechizo-icon-nombre">
+						<img src="images/utilidad.svg" alt="Lock Icon" class="icon-hechizo">
+						<h4 class="hechizo-text">Lumus</h4>
+					</span>
+					<p class="hechizo-description">Este hechizo es extremadamente práctico, invocando una luz brillante
+						en la punta de la varita del lanzador. Es esencial en la oscuridad y en la exploración de áreas
+						desconocidas.</p>
+				</div>
+			</div>
+			<div class="col-12 col-md-4 mb-4">
+				<div class="hechizo-card" onmouseover="showDescription(this)" onmouseout="hideDescription(this)">
+					<span class="hechizo-icon-nombre">
+						<img src="images/proteccion.svg" alt="Lock Icon" class="icon-hechizo">
+						<h4 class="hechizo-text">Protego</h4>
+					</span>
+					<p class="hechizo-description">Crea una barrera mágica invisible que puede desviar hechizos y
+						objetos físicos. Su eficacia depende de la fuerza del lanzador.</p>
+				</div>
+			</div>
+			<div class="col-12 col-md-4 mb-4">
+				<div class="hechizo-card" onmouseover="showDescription(this)" onmouseout="hideDescription(this)">
+					<span class="hechizo-icon-nombre">
+						<img src="images/curacion.svg" alt="Lock Icon" class="icon-hechizo">
+						<h4 class="hechizo-text">Rennervate</h4>
+					</span>
+					<p class="hechizo-description">Anteriormente conocido como "Enervate", este hechizo revierte los
+						efectos de la aturdimiento y la inconsciencia, devolviendo a la víctima a su estado normal de
+						alerta.</p>
+				</div>
+			</div>
+			<div class="col-12 col-md-4 mb-4">
+				<div class="hechizo-card" onmouseover="showDescription(this)" onmouseout="hideDescription(this)">
+					<span class="hechizo-icon-nombre">
+						<img src="images/defensa.svg" alt="Lock Icon" class="icon-hechizo">
+						<h4 class="hechizo-text">Sectumsempra</h4>
+					</span>
+					<p class="hechizo-description">Un hechizo peligroso creado por Severus Snape que provoca cortes
+						profundos y sangrantes en la víctima como si fueran infligidos por una espada invisible.
+						Requiere atención médica inmediata.</p>
+				</div>
+			</div>
+			<div class="col-12 col-md-4 mb-4">
+				<div class="hechizo-card" onmouseover="showDescription(this)" onmouseout="hideDescription(this)">
+					<span class="hechizo-icon-nombre">
+						<img src="images/encantamiento.svg" alt="Lock Icon" class="icon-hechizo">
+						<h4 class="hechizo-text">Wingardium Leviosa</h4>
+					</span>
+					<p class="hechizo-description">Uno de los primeros hechizos enseñados a los estudiantes jóvenes,
+						permite al lanzador hacer levitar y mover objetos. Requiere concentración y un movimiento de
+						varita preciso.</p>
+				</div>
+			</div>
+			<!-- Repite para más hechizos -->
+		</div>
+	</div>
+
+
+	<!-- Tipos de hechizos -->
+	<div class="why-choose-section">
+		<div class="container">
+			<div class="row my-5">
+				<div class="col-6 col-md-6 col-lg-3 mb-4">
+					<div class="feature">
+						<div class="icon">
+							<img src="images/proteccion.svg" alt="Lock Icon" class="icon-description">
+						</div>
+						<h3>Protección</h3>
+					</div>
+				</div>
+				<div class="col-6 col-md-6 col-lg-3 mb-4">
+					<div class="feature">
+						<div class="icon">
+							<img src="images/defensa.svg" alt="Image" class="icon-description">
+						</div>
+						<h3>Defensa</h3>
+					</div>
+				</div>
+				<div class="col-6 col-md-6 col-lg-3 mb-4">
+					<div class="feature">
+						<div class="icon">
+							<img src="images/utilidad.svg" alt="Image" class="icon-description">
+						</div>
+						<h3>Utilidad</h3>
+					</div>
+				</div>
+				<div class="col-6 col-md-6 col-lg-3 mb-4">
+					<div class="feature">
+						<div class="icon">
+							<img src="images/encantamiento.svg" alt="Image" class="icon-description">
+						</div>
+						<h3>Encantammiento</h3>
+					</div>
+				</div>
+				<div class="col-6 col-md-6 col-lg-3 mb-4">
+					<div class="feature">
+						<div class="icon">
+							<img src="images/transformacion.svg" alt="Image" class="icon-description">
+						</div>
+						<h3>Transformación</h3>
+					</div>
+				</div>
+				<div class="col-6 col-md-6 col-lg-3 mb-4">
+					<div class="feature">
+						<div class="icon">
+							<img src="images/oculto.svg" alt="Image" class="icon-description">
+						</div>
+						<h3>Ocultamiento</h3>
+					</div>
+				</div>
+				<div class="col-6 col-md-6 col-lg-3 mb-4">
+					<div class="feature">
+						<div class="icon">
+							<img src="images/curacion.svg" alt="Image" class="icon-description">
+						</div>
+						<h3>Curaciones</h3>
+					</div>
+				</div>
+				<div class="col-6 col-md-6 col-lg-3 mb-4">
+					<div class="feature">
+						<div class="icon">
+							<img src="images/imperdonable.svg" alt="Image" class="icon-description">
+						</div>
+						<h3>Maldiciones imperdonables</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Why Choose Us Section -->
+
+
+
+	<!-- Start Footer Section -->
+	<!-- <footer class="footer-section">
+		<div class="container relative">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="subscription-form">
+						<h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg"
+									alt="Image" class="img-fluid"></span><span>Subscribete a nuestras Noticias</span>
+						</h3>
+						<form action="#" class="row g-3">
+							<div class="col-auto">
+								<input type="text" class="form-control" placeholder="Nombre">
+							</div>
+							<div class="col-auto">
+								<input type="email" class="form-control" placeholder="Correo electrónico">
+							</div>
+							<div class="col-auto">
+								<button class="btn btn-primary">
+									<span class="fa fa-paper-plane"></span>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer> -->
+
+	<script>
+		function showDescription(card) {
+			card.querySelector('.hechizo-description').style.display = 'block';
+		}
+
+		function hideDescription(card) {
+			card.querySelector('.hechizo-description').style.display = 'none';
+		}
+	</script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/tiny-slider.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+
+</html>

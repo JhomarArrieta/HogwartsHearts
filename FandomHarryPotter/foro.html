@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Untree.co">
+	<link rel="shortcut icon" href="hallowsIcon.png">
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap4" />
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+	<link href="css/tiny-slider.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<title>Foro</title>
+</head>
+
+<body>
+
+	<!-- Barra de Navegación -->
+	<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">HogwartsHearts<span>.</span></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
+				aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarsFurni">
+				<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+					<li><a class="nav-link" href="index.html">Inicio</a></li>
+					<li><a class="nav-link" href="books.html">Libros</a></li>
+					<li><a class="nav-link" href="personajes.html">Personajes</a></li>
+					<li><a class="nav-link" href="spells.html">Hechizos</a></li>
+					<li><a class="nav-link" href="news.html">Noticias</a></li>
+					<li class="nav-item active"><a class="nav-link" href="foro.html">Foro</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Barra de Titulo -->
+	<div class="hero2">
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-lg-5">
+					<div class="intro-excerpt">
+						<h1>Foro</h1>
+						<p><a href="#" data-bs-toggle="modal" data-bs-target="#modalPublicacion"
+								class="btn btn-secondary me-2">Nueva publicación</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- modal publicacion -->
+	<div class="modal fade modal-foro" id="modalPublicacion" tabindex="-1" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-body-foro">
+					<form id="formPublicacion">
+						<div class="usuario-foro">
+							<!-- Combobox para las casas de Harry Potter -->
+							<div class="mb-3">
+								<label for="selectCasa" class="form-label">A que casa perteneces</label>
+								<select class="form-select" id="selectCasa">
+									<option value="Gryffindor">Gryffindor</option>
+									<option value="Hufflepuff">Hufflepuff</option>
+									<option value="Ravenclaw">Ravenclaw</option>
+									<option value="Slytherin">Slytherin</option>
+								</select>
+							</div>
+							<!-- Campo para el nombre del usuario -->
+							<div class="mb-3">
+								<label for="inputNombreUsuario" class="form-label">Nombre del Usuario</label>
+								<input type="text" class="form-control" id="inputNombreUsuario"
+									placeholder="Harry Potter">
+							</div>
+						</div>
+						<!-- Tag y combobox dependiente -->
+						<div class="mb-3">
+							<label for="selectCategoria" class="form-label">Categoría</label>
+							<select class="form-select" id="selectCategoria">
+								<option value="">Selecciona una categoría</option>
+								<option value="Libros">Libros</option>
+								<option value="Personajes">Personajes</option>
+								<option value="Hechizos">Hechizos</option>
+							</select>
+						</div>
+
+						<!-- Segundo combobox dependiente, inicialmente oculto -->
+						<div class="mb-3" id="selectDependienteContainer" style="display: none;">
+							<label for="selectDependiente" class="form-label">Selecciona una Opción</label>
+							<select class="form-select" id="selectDependiente">
+								<!-- Las opciones se llenarán dinámicamente con JavaScript -->
+							</select>
+						</div>
+
+						<!-- Área de texto para el comentario del usuario -->
+						<div class="mb-3">
+							<label for="textareaComentario" class="form-label">Tu Comentario</label>
+							<textarea class="form-control" id="textareaComentario" rows="3"></textarea>
+						</div>
+
+						<!-- Botón para publicar el comentario -->
+						<div class="d-grid">
+							<button type="submit" class="btn btn-primary">Publicar</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- aqui van las publicaciones -->
+
+	<section id="containerCards" class="row row-cols-1 row-cols-md-4 g-4 m-3"></section>
+
+	<!-- modal update/delete -->
+	<div class="modal fade" id="UDModal" tabindex="-1" aria-labelledby="commentModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="commentModalLabel">Editar comentario</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<textarea id="editCommentText" class="form-control"></textarea>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" onclick="guardarComentario()">Guardar</button>
+					<button type="button" class="btn btn-danger" onclick="eliminarComentario()">Eliminar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="js/tags.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/tiny-slider.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/envioFormulario.js"></script>
+	<script>
+		const data = {
+			comments: "Creación de un nuevo comentario!"
+		}
+
+		const containerCards = document.getElementById("containerCards")
+
+		const obtenerComentarios = async () => {
+			try {
+				const res = await fetch('http://localhost:8080/api/comments');
+				const data = await res.json();
+				console.log('Comentarios obtenidos:', data);
+				return data;
+			} catch (error) {
+				console.error('Error al obtener comentarios:', error);
+			}
+		}
+
+		const crearComentario = async (data) => {
+			try {
+				const res = await fetch('http://localhost:8080/api/comments', {
+					method: "POST",
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify(data)
+				});
+				const dataJson = await res.json();
+				console.log('Comentario creado:', dataJson);
+				return dataJson;
+			} catch (error) {
+				console.error('Error al crear comentario:', error);
+			}
+		}
+
+
+		async function eliminarComentario() {
+			if (comentarioId === undefined || isNaN(comentarioId)) {
+				console.error('ID de comentario no válido:', comentarioId);
+				return;
+			}
+
+			if (!confirm('¿Estás seguro de que deseas eliminar este comentario?')) {
+				return; // Si el usuario no confirma, no hacer nada
+			}
+
+			try {
+				const res = await fetch(`http://localhost:8080/api/comments/${comentarioId}`, {
+					method: "DELETE",
+				});
+
+				if (res.ok) {
+					console.log('Comentario eliminado:', comentarioId);
+				} else {
+					console.error('Error al eliminar comentario:', res.status, res.statusText);
+					const errorResponse = await res.text();
+					console.error('Detalle del error:', errorResponse);
+				}
+			} catch (error) {
+				console.error('Error al eliminar comentario:', error);
+			}
+			location.reload();
+
+		}
+
+
+		let comentarioId;
+
+		function abrirModal(id, comentario) {
+			comentarioId = id;
+			document.getElementById('editCommentText').value = comentario;
+		}
+
+		function guardarComentario() {
+			const comentarioEditado = document.getElementById('editCommentText').value;
+			editarComentario(comentarioId, comentarioEditado); // Envía la actualización
+		}
+
+		const editarComentario = async (idComment, nuevoTexto) => {
+			try {
+				const response = await fetch(`http://localhost:8080/api/comments/${idComment}`, {
+					method: 'PUT',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify({ comment: nuevoTexto }) // Envía solo el comentario actualizado
+				});
+				const dataJson = await response.json();
+				console.log('Comentario actualizado:', dataJson);
+				location.reload();
+			} catch (error) {
+				console.error('Error al actualizar comentario:', error);
+			}
+		}
+
+		obtenerComentarios().then(data => {
+			data.forEach(element => {
+
+				let houseClass = element.house.toLowerCase();
+				let card =
+					`
+<div class="col">
+	<div class="card h-100">
+        <div class="card-body ${houseClass}">
+            <h5 class="card-title">${element.categoryOption}</h5>
+            <p class="card-text">${element.comment}</p>
+        </div>
+        <div class="card-footer">
+            Publicado por: ${element.username}
+			<button class="UDbtn" data-bs-toggle="modal" data-bs-target="#UDModal" onclick="abrirModal(${element.idComment}, '${element.comment}')">⋮</button>
+        </div>
+	</div>
+</div>
+				`
+				containerCards.innerHTML += card;
+			});
+		})
+
+	</script>
+
+</body>
+
+</html>
